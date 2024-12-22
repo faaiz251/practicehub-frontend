@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Box, Button, Typography, CircularProgress } from "@mui/material";
 import { executeCode } from "../Compiler_API/api1";

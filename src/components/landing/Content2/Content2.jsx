@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
 import { Navbar } from "../../common/NavBar/Navbar";
 import { Typography } from "@mui/material";
 import { Code1 } from "../../Code Editor/Code1/Code1";

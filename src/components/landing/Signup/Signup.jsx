@@ -119,7 +119,7 @@ export function Signup() {
             } catch (err) {
               if (err) {
                 alert(
-                  "Username already existed. Please Choose a different username"
+                  "Error from the frontend"
                 );
               }
             }

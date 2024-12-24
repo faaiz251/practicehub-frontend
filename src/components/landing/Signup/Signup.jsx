@@ -7,6 +7,7 @@ export function Signup() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <div
@@ -98,33 +99,33 @@ export function Signup() {
             width: "50%",
             fontWeight: "bold",
           }}
+
           onClick={async () => {
+            if (!username || !password) {
+              alert("Please fill in both username and password fields.");
+              return;
+            }
+            setIsSubmitting(true);
             try {
-              console.log(`${import.meta.env.VITE_BACKEND_URL}/signup/`);
-              const res = await axios.post(
-                `${import.meta.env.VITE_BACKEND_URL}/signup/`,
-                {
-                  username: username,
-                  password: password,
+              const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup/`, {
+                username, password,
+              }, {
+                headers: {
+                  "Content-type": "application/json",
                 },
-                {
-                  headers: {
-                    "Content-type": "application/json",
-                  },
-                }
-              );
-          
+              });
               const data = res.data;
               console.log(data);
-              alert("Signup SuccessFully! Click on Signin to login");
+              alert("Signup Successfully! Click on Signin to login.");
             } catch (err) {
-              if (err) {
-                alert(
-                  "Error from the frontend"
-                );
-              }
+              console.error(err);
+              alert(err.response?.data?.message || "Signup failed. Please try again.");
+            } finally {
+              setIsSubmitting(false);
             }
           }}
+          disabled={isSubmitting}
+          
         >
           Signup
         </Button>

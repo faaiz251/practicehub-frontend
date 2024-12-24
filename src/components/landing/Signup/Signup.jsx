@@ -100,6 +100,7 @@ export function Signup() {
           }}
           onClick={async () => {
             try {
+              console.log(`${import.meta.env.VITE_BACKEND_URL}/signup/`);
               const res = await axios.post(
                 `${import.meta.env.VITE_BACKEND_URL}/signup/`,
                 {
@@ -112,7 +113,7 @@ export function Signup() {
                   },
                 }
               );
-
+          
               const data = res.data;
               console.log(data);
               alert("Signup SuccessFully! Click on Signin to login");

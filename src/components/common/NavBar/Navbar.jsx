@@ -5,7 +5,8 @@ export function Navbar() {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="header"
+      <div
+        className="header"
         style={{
           display: "flex",
           flexDirection: "column",

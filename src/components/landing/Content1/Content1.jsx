@@ -1,14 +1,13 @@
 import { Navbar } from "../../common/NavBar/Navbar";
 import { Typography } from "@mui/material";
 import { Code1 } from "../../Code Editor/Code1/Code1";
-import './Content1.css'
-
+import "./Content1.css";
 
 export function Content1() {
   return (
     <div style={{ height: "100%", overflow: "auto" }}>
       <div className="header">
-      <Navbar />
+        <Navbar />
       </div>
       <Problem1 />
     </div>
@@ -17,7 +16,7 @@ export function Content1() {
 
 function Problem1() {
   return (
-    <div> 
+    <div>
       <div
         style={{
           display: "flex",
@@ -69,7 +68,7 @@ function Problem1() {
         </div>
       </div>
       <div className="coder">
-      <Code1></Code1>
+        <Code1></Code1>
       </div>
     </div>
   );

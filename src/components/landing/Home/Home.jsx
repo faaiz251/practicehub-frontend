@@ -5,17 +5,16 @@ import "./Home.css";
 export function Home() {
   return (
     <div>
-      <div className ='header1'>
+      <div className="header1">
         <MainNav></MainNav>
-        </div>
-        <br/>
-        <Home1></Home1>
-  
+      </div>
+      <br />
+      <Home1></Home1>
     </div>
-  )
+  );
 }
 
- function Home1() {
+function Home1() {
   const navigate = useNavigate();
   return (
     <div className="container">
@@ -24,11 +23,26 @@ export function Home() {
           <div className="image">
             <div className="image-box">
               <div className="inner-div">
-                <div className="circle" style={{ backgroundColor: "#4fc3f7" }}></div>
-                <div className="circle" style={{ backgroundColor: "#81c784" }}></div>
-                <div className="circle" style={{ backgroundColor: "#ffb74d" }}></div>
-                <div className="circle" style={{ backgroundColor: "#e57373" }}></div>
-                <div className="circle round" style={{ backgroundColor: "#4fc3f7" }}></div>
+                <div
+                  className="circle"
+                  style={{ backgroundColor: "#4fc3f7" }}
+                ></div>
+                <div
+                  className="circle"
+                  style={{ backgroundColor: "#81c784" }}
+                ></div>
+                <div
+                  className="circle"
+                  style={{ backgroundColor: "#ffb74d" }}
+                ></div>
+                <div
+                  className="circle"
+                  style={{ backgroundColor: "#e57373" }}
+                ></div>
+                <div
+                  className="circle round"
+                  style={{ backgroundColor: "#4fc3f7" }}
+                ></div>
               </div>
             </div>
           </div>

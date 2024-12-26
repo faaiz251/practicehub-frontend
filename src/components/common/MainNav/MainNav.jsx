@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import '../../../App.css';
+import "../../../App.css";
 
 export function MainNav() {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ export function MainNav() {
         flexDirection: "column",
         color: "#fff",
         fontFamily: "Arial, sans-serif",
-        padding: '50 100px'
+        padding: "50 100px",
       }}
     >
       <div
@@ -21,8 +21,10 @@ export function MainNav() {
           padding: "70px 150px",
         }}
       >
-        <div className='main-header'
-        style={{ display: "flex", alignItems: "center" }}>
+        <div
+          className="main-header"
+          style={{ display: "flex", alignItems: "center" }}
+        >
           <div
             style={{
               fontWeight: "bold",
@@ -45,7 +47,8 @@ export function MainNav() {
             Hub
           </div>
         </div>
-        <div className="header2"
+        <div
+          className="header2"
           style={{
             display: "flex",
             gap: "100px",

@@ -6,15 +6,14 @@ import "./Content.css";
 export function Content() {
   return (
     <div>
-    <div className ='header'>
-      <Navbar />
+      <div className="header">
+        <Navbar />
       </div>
       <br />
-      <div  className="container">
-      <Problems />
+      <div className="container">
+        <Problems />
       </div>
-      </div>
-   
+    </div>
   );
 }
 
@@ -35,7 +34,11 @@ function Problems() {
         >
           Two Sum
         </Button>
-        <Typography variant="h5" className="difficulty" style={{ color: "green" }}>
+        <Typography
+          variant="h5"
+          className="difficulty"
+          style={{ color: "green" }}
+        >
           Easy
         </Typography>
       </div>
@@ -48,7 +51,11 @@ function Problems() {
         >
           Longest Substring Without Repeating Characters
         </Button>
-        <Typography variant="h5" className="difficulty" style={{ color: "yellow" }}>
+        <Typography
+          variant="h5"
+          className="difficulty"
+          style={{ color: "yellow" }}
+        >
           Medium
         </Typography>
       </div>
@@ -61,7 +68,11 @@ function Problems() {
         >
           Regular Expression Matching
         </Button>
-        <Typography variant="h5" className="difficulty" style={{ color: "red" }}>
+        <Typography
+          variant="h5"
+          className="difficulty"
+          style={{ color: "red" }}
+        >
           Hard
         </Typography>
       </div>

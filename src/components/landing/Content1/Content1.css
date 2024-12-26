@@ -1,85 +1,75 @@
-
 .editor-container {
-    padding: 16px;
+  padding: 16px;
+}
+
+.language-selector {
+  margin-bottom: 16px;
+}
+
+.editor-box {
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .editor-container {
+    padding: 8px;
   }
-  
+
   .language-selector {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .editor-box {
-    width: 50%;
+    height: 65vh;
   }
-  
-  
-  @media (max-width: 1024px) {
-    .editor-container {
-      padding: 8px;
-    }
-  
-    .language-selector {
-      margin-bottom: 12px;
-    }
-  
-    .editor-box {
-      height: 65vh;
-    }
+}
 
-   
+@media (max-width: 900px) {
+  .output-box {
+    margin-top: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .editor-box {
+    margin-bottom: 10px;
   }
 
-  @media (max-width: 900px) {
-    .output-box {
-      margin-top: 170px;
-    }
-   
+  .language-selector {
+    display: flex;
+    justify-content: space-between;
   }
 
-  
-  
-  @media (max-width: 768px) {
-    .editor-box {
-      margin-bottom: 10px;
-
-    }
-
-    .language-selector {
-      display: flex;
-      justify-content: space-between;
-    }
-   
-
-    .output-box {
-      margin-top: 190px;
-    }
-    
-    .output {
-      display: flex;
-      justify-content: space-between;
-    }
+  .output-box {
+    margin-top: 190px;
   }
-  
-  @media (max-width: 480px) {
-    .editor-container {
-      padding: 2px;
-    }
 
-    .full-box {
-      border: none;
-    }
-  
-    .language-selector {
-      text-align: left;
-    }
-  
-    .output {
-      display: flex;
-      justify-content: space-between;
-    }
-   
-    .output-box {
-      margin-top: 190px;
-      height: 50vh;
-    }
+  .output {
+    display: flex;
+    justify-content: space-between;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .editor-container {
+    padding: 2px;
+  }
+
+  .full-box {
+    border: none;
+  }
+
+  .language-selector {
+    text-align: left;
+  }
+
+  .output {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .output-box {
+    margin-top: 190px;
+    height: 50vh;
+  }
+}

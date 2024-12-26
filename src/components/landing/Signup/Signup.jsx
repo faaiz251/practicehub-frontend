@@ -99,7 +99,6 @@ export function Signup() {
             width: "50%",
             fontWeight: "bold",
           }}
-
           onClick={async () => {
             if (!username || !password) {
               alert("Please fill in both username and password fields.");
@@ -107,25 +106,32 @@ export function Signup() {
             }
             setIsSubmitting(true);
             try {
-              const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup/`, {
-                username, password,
-              }, {
-                headers: {
-                  "Content-type": "application/json",
+              const res = await axios.post(
+                `${import.meta.env.VITE_BACKEND_URL}/signup/`,
+                {
+                  username,
+                  password,
                 },
-              });
+                {
+                  headers: {
+                    "Content-type": "application/json",
+                  },
+                }
+              );
               const data = res.data;
               console.log(data);
               alert("Signup Successfully! Click on Signin to login.");
             } catch (err) {
               console.error(err);
-              alert(err.response?.data?.message || "Signup failed. Please try again.");
+              alert(
+                err.response?.data?.message ||
+                  "Signup failed. Please try again."
+              );
             } finally {
               setIsSubmitting(false);
             }
           }}
           disabled={isSubmitting}
-          
         >
           Signup
         </Button>

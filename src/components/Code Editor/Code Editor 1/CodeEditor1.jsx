@@ -30,7 +30,7 @@ export function CodeEditor() {
               minimap: { enabled: false },
             }}
             height="75vh"
-            width='40vw'
+            width="40vw"
             theme="vs-dark"
             language={language}
             onMount={onMount}
@@ -40,9 +40,8 @@ export function CodeEditor() {
         </Box>
         <div className="output">
           <Output editorRef={editorRef} language={language} />
-          </div>
+        </div>
       </Stack>
     </Box>
   );
 }
-

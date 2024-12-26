@@ -4,7 +4,6 @@ import { Navbar } from "../../common/NavBar/Navbar";
 import { Typography } from "@mui/material";
 import { Code1 } from "../../Code Editor/Code1/Code1";
 
-
 export function Content3() {
   return (
     <div style={{ height: "100%", overflow: "auto" }}>

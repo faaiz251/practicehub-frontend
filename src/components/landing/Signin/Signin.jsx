@@ -100,7 +100,7 @@ export function Signin() {
           onClick={async () => {
             try {
               const res = await axios.post(
-                `${import.meta.env.VITE_BACKEND_URL}/signin/`,
+                `${import.meta.env.VITE_BACKEND_URL}/signin`,
                 {
                   username: username,
                   password: password,

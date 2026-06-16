@@ -21,16 +21,21 @@ export function CodeEditor() {
   };
 
   return (
-    <Box className="editor-container">
-      <Stack direction={{ xs: "column", md: "row" }} spacing={4}>
-        <Box className="editor-box">
+    <Box className="editor-container" sx={{ p: 2 }}>
+      <Stack direction={{ xs: "column", lg: "row" }} spacing={{ xs: 2, lg: 4 }}>
+        <Box className="editor-box" sx={{ flex: 1, minWidth: 0 }}>
           <LanguageSelector language={language} onSelect={onSelect} />
           <Editor
             options={{
               minimap: { enabled: false },
+              fontSize: 14,
+              lineNumbers: "on",
+              roundedSelection: false,
+              scrollBeyondLastLine: false,
+              readOnly: false,
             }}
-            height="75vh"
-            width="40vw"
+            height="60vh"
+            width="100%"
             theme="vs-dark"
             language={language}
             onMount={onMount}
@@ -38,9 +43,9 @@ export function CodeEditor() {
             onChange={(value) => setValue(value)}
           />
         </Box>
-        <div className="output">
+        <Box sx={{ flex: 1, minWidth: 0 }}>
           <Output editorRef={editorRef} language={language} />
-        </div>
+        </Box>
       </Stack>
     </Box>
   );
